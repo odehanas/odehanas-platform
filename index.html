@@ -11,40 +11,60 @@
       background: #f9fafb;
       color: #1f2933;
     }
+
     header {
       padding: 80px 20px;
       text-align: center;
       background: white;
     }
+
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
+
     header p {
       max-width: 700px;
       margin: auto;
       color: #4b5563;
     }
+
     section {
       max-width: 1100px;
       margin: auto;
       padding: 60px 20px;
     }
+
     h2 {
       text-align: center;
       margin-bottom: 40px;
     }
+
     .apps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .card {
       background: white;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       background: #111827;
       color: #9ca3af;
@@ -54,88 +74,91 @@
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>OdehAnas Platform</h1>
-  <p>
-    A unified digital platform showcasing specialized applications for
-    financial, operational, and public‑sector solutions.
-  </p>
-</header>
+  <header>
+    <h1>OdehAnas Platform</h1>
+    <p>
+      A unified digital platform showcasing specialized applications for
+      financial, operational, and public-sector solutions.
+    </p>
+  </header>
 
-<section>
-  <h2>Applications</h2>
-  <div class="apps">
+  <section>
+    <h2>Applications</h2>
+    <div class="apps">
 
-    <div class="card">
-  <h3>GovBudget</h3>
-  <p>Government budget planning and monitoring system.</p>
-  <a href="http://govbudget.odehanas.com" target="_blank">
-    Access Application →
-  </a>
-</div>
+      <div class="card">
+        <h3>GovBudget</h3>
+        <p>Government budget planning and monitoring system.</p>
+        <a href="https://govbudget.odehanas.com/" target="_blank" rel="noopener noreferrer">
+          Access Application →
+        </a>
+      </div>
 
-    <div class="card">
-  <h3>PlatesWeb</h3>
-  <p>Web platform for managing and viewing plate inventory, auctions, and sales.</p>
-  <a href="http://platesweb.odehanas.com" target="_blank">
-    Access Application →
-  </a>
-</div>
-<div class="card">
-  <h3>Real Estate Manager</h3>
-  <p>Managing the Real Estate Needs in one place.</p>
-  <a href="http://http://realestatemanager.odehanas.com/" target="_blank">
-    Access Application →
-  </a>
-</div>
-    <div class="card">
-  <h3>Alfares Workshop</h3>
-  <p>Workshop management and operational system built for automotive service centers.</p>
-  <a href="http://alfarisworkshop.odehanas.com" target="_blank">
-    Access Application →
-  </a>
-</div>
+      <div class="card">
+        <h3>PlatesWeb</h3>
+        <p>Web platform for managing and viewing plate inventory, auctions, and sales.</p>
+        <a href="https://platesweb.odehanas.com/" target="_blank" rel="noopener noreferrer">
+          Access Application →
+        </a>
+      </div>
 
-    <div class="card">
-  <h3>VABS ERP</h3>
-  <p>Accounting and enterprise resource planning system for business and financial operations.</p>
-  <a href="http://vabserp.odehanas.com" target="_blank">
-    Access Application →
-  </a>
-</div>
-    <div class="card">
-  <h3>POS System</h3>
-  <p>Point-of-sale and operational management system for retail and service businesses.</p>
-  <a href="http://posapp.odehanas.com" target="_blank">
-    Access Application →
-  </a>
-</div>
+      <div class="card">
+        <h3>Real Estate Manager</h3>
+        <p>Managing the Real Estate Needs in one place.</p>
+        <a href="https://realestatemanager.odehanas.com/" target="_blank" rel="noopener noreferrer">
+          Access Application →
+        </a>
+      </div>
 
-    <div class="card">
-  <h3>VABS PORTAL</h3>
-  <p>VABS Management Services Portal for internal use, managing client records.</p>
-  <a href="http://vabsportal.odehanas.com/Login" target="_blank">
-    Access Application →
-  </a>
-</div>
-  </div>
-</section>
+      <div class="card">
+        <h3>Alfares Workshop</h3>
+        <p>Workshop management and operational system built for automotive service centers.</p>
+        <a href="https://alfarisworkshop.odehanas.com/" target="_blank" rel="noopener noreferrer">
+          Access Application →
+        </a>
+      </div>
 
-<section>
-  <h2>Platform Vision</h2>
-  <p style="text-align:center; max-width:800px; margin:auto;">
-    OdehAnas Platform is designed as a scalable foundation where independent
-    applications operate under one unified ecosystem with centralized access and
-    subscription control.
-  </p>
-</section>
+      <div class="card">
+        <h3>VABS ERP</h3>
+        <p>Accounting and enterprise resource planning system for business and financial operations.</p>
+        <a href="https://vabserp.odehanas.com/" target="_blank" rel="noopener noreferrer">
+          Access Application →
+        </a>
+      </div>
 
-<footer>
-  © 2026 OdehAnas • Platform under active development
-</footer>
+      <div class="card">
+        <h3>POS System</h3>
+        <p>Point-of-sale and operational management system for retail and service businesses.</p>
+        <a href="https://posapp.odehanas.com/" target="_blank" rel="noopener noreferrer">
+          Access Application →
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>VABS PORTAL</h3>
+        <p>VABS Management Services Portal for internal use, managing client records.</p>
+        <a href="https://vabsportal.odehanas.com/Login" target="_blank" rel="noopener noreferrer">
+          Access Application →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Platform Vision</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      OdehAnas Platform is designed as a scalable foundation where independent
+      applications operate under one unified ecosystem with centralized access and
+      subscription control.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 OdehAnas • Platform under active development
+  </footer>
 
 </body>
 </html>
