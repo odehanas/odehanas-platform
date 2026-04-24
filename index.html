@@ -1,164 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>OdehAnas Platform</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-2: #f8fafc;
+      --text: #172033;
+      --muted: #5b6475;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --footer-bg: #111827;
+      --footer-text: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f9fafb;
-      color: #1f2933;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    header {
-      padding: 80px 20px;
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(37, 99, 235, 0.02)),
+        #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      padding: 88px 20px 72px;
       text-align: center;
-      background: white;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .hero-badge {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.10);
+      color: var(--primary-dark);
+      font-size: 0.9rem;
+      font-weight: bold;
     }
 
-    header p {
-      max-width: 700px;
-      margin: auto;
-      color: #4b5563;
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: 2.7rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
     }
 
     section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
+      padding: 60px 0;
     }
 
-    h2 {
+    .section-title {
+      margin: 0 0 10px;
       text-align: center;
-      margin-bottom: 40px;
+      font-size: 2rem;
     }
 
-    .apps {
+    .section-subtitle {
+      max-width: 760px;
+      margin: 0 auto 36px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .apps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
     }
 
     .card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      min-height: 72px;
     }
 
     .card a {
       display: inline-block;
-      margin-top: 10px;
-      color: #2563eb;
+      color: var(--primary);
       text-decoration: none;
       font-weight: bold;
     }
 
     .card a:hover {
+      color: var(--primary-dark);
       text-decoration: underline;
     }
 
-    footer {
-      background: #111827;
-      color: #9ca3af;
+    .vision-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      max-width: 900px;
+      margin: 0 auto;
       text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        padding: 70px 20px 56px;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+      }
+
+      .card p {
+        min-height: auto;
+      }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>OdehAnas Platform</h1>
-    <p>
-      A unified digital platform showcasing specialized applications for
-      financial, operational, and public-sector solutions.
-    </p>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge">Unified Applications Portal</div>
+      <h1>OdehAnas Platform</h1>
+      <p>
+        A unified digital platform showcasing specialized applications for
+        financial, operational, and public-sector solutions.
+      </p>
+    </div>
   </header>
 
-  <section>
-    <h2>Applications</h2>
-    <div class="apps">
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Applications</h2>
+        <p class="section-subtitle">
+          Access the available business applications and services from one central portal.
+        </p>
 
-      <div class="card">
-        <h3>GovBudget</h3>
-        <p>Government budget planning and monitoring system.</p>
-        <a href="https://govbudget.odehanas.com/" target="_blank" rel="noopener noreferrer">
-          Access Application →
-        </a>
+        <div class="apps-grid">
+          <div class="card">
+            <h3>GovBudget</h3>
+            <p>Government budget planning and monitoring system.</p>
+            <a href="https://govbudget.odehanas.com/" target="_blank" rel="noopener noreferrer">
+              Access Application →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>PlatesWeb</h3>
+            <p>Web platform for managing and viewing plate inventory, auctions, and sales.</p>
+            <a href="https://platesweb.odehanas.com/" target="_blank" rel="noopener noreferrer">
+              Access Application →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Real Estate Manager</h3>
+            <p>Managing the Real Estate Needs in one place.</p>
+            <a href="https://realestatemanager.odehanas.com/" target="_blank" rel="noopener noreferrer">
+              Access Application →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Alfares Workshop</h3>
+            <p>Workshop management and operational system built for automotive service centers.</p>
+            <a href="https://alfarisworkshop.odehanas.com/" target="_blank" rel="noopener noreferrer">
+              Access Application →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>VABS ERP</h3>
+            <p>Accounting and enterprise resource planning system for business and financial operations.</p>
+            <a href="https://vabserp.odehanas.com/" target="_blank" rel="noopener noreferrer">
+              Access Application →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>POS System</h3>
+            <p>Point-of-sale and operational management system for retail and service businesses.</p>
+            <a href="https://posapp.odehanas.com/" target="_blank" rel="noopener noreferrer">
+              Access Application →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>VABS PORTAL</h3>
+            <p>VABS Management Services Portal for internal use, managing client records.</p>
+            <a href="https://vabsportal.odehanas.com/Login" target="_blank" rel="noopener noreferrer">
+              Access Application →
+            </a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>PlatesWeb</h3>
-        <p>Web platform for managing and viewing plate inventory, auctions, and sales.</p>
-        <a href="https://platesweb.odehanas.com/" target="_blank" rel="noopener noreferrer">
-          Access Application →
-        </a>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Platform Vision</h2>
+        <div class="vision-box">
+          OdehAnas Platform is designed as a scalable foundation where independent
+          applications operate under one unified ecosystem with centralized access
+          and subscription control.
+        </div>
       </div>
-
-      <div class="card">
-        <h3>Real Estate Manager</h3>
-        <p>Managing the Real Estate Needs in one place.</p>
-        <a href="https://realestatemanager.odehanas.com/" target="_blank" rel="noopener noreferrer">
-          Access Application →
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Alfares Workshop</h3>
-        <p>Workshop management and operational system built for automotive service centers.</p>
-        <a href="https://alfarisworkshop.odehanas.com/" target="_blank" rel="noopener noreferrer">
-          Access Application →
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>VABS ERP</h3>
-        <p>Accounting and enterprise resource planning system for business and financial operations.</p>
-        <a href="https://vabserp.odehanas.com/" target="_blank" rel="noopener noreferrer">
-          Access Application →
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>POS System</h3>
-        <p>Point-of-sale and operational management system for retail and service businesses.</p>
-        <a href="https://posapp.odehanas.com/" target="_blank" rel="noopener noreferrer">
-          Access Application →
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>VABS PORTAL</h3>
-        <p>VABS Management Services Portal for internal use, managing client records.</p>
-        <a href="https://vabsportal.odehanas.com/Login" target="_blank" rel="noopener noreferrer">
-          Access Application →
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <h2>Platform Vision</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      OdehAnas Platform is designed as a scalable foundation where independent
-      applications operate under one unified ecosystem with centralized access and
-      subscription control.
-    </p>
-  </section>
+    </section>
+  </main>
 
   <footer>
     © 2026 OdehAnas • Platform under active development
   </footer>
-
 </body>
 </html>
